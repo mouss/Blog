@@ -1,0 +1,27 @@
+// Page Header
+// Set your background image for this header on the line below.
+header.intro-header(style="background-image: url('img/home-bg.jpg')")
+  .container
+    .row
+      .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+        .site-heading
+          h1 Blog de Mouss
+          hr.small
+          span.subheading Un Blog en Full Stack Js
+
+// Main Content
+.container
+  .row
+    .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+      each val in article
+        .post-preview
+          a(href='/article/'+val._id)
+            h2.post-title= val.titre
+            h3.post-subtitle= val.contenu
+          p.post-meta='Poster par '+val.auteur+' le '+val.date.getDate()+' '+mois[val.date.getMonth()]+' '+val.date.getFullYear()
+      hr
+      // Pager
+      ul.pager
+        li.next
+          a(href='#') Older Posts →
+hr

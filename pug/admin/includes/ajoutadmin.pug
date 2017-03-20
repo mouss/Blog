@@ -1,0 +1,26 @@
+.col-sm-8
+  h2= response
+  form.form-horizontal(method='POST', action='/admin/ajout', enctype='multipart/form-data')
+    fieldset
+      // Form Name
+      legend Ajout d'un nouvel article
+      // Text input
+      .form-group
+        label.col-md-4.control-label(for='textinput') Titre
+        .col-md-8
+          input#textinput.form-control.input-md(name='titre', type='text', placeholder='Titre')
+      // File Button
+      .form-group
+        label.col-md-4.control-label(for='image') Image
+        .col-md-4
+          input#image.input-file(name='image', type='file')
+      // Textarea
+      .form-group
+        label.col-md-4.control-label(for='contenu') Contenu
+        .col-md-4
+          textarea#contenu.form-control(name='contenu') default text
+      // Button
+      .form-group
+        label.col-md-4.control-label(for='valider')
+        .col-md-4
+          button#valider.btn.btn-primary(name='valider') Valider

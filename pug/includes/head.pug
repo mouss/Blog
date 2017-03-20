@@ -1,0 +1,23 @@
+doctype html
+html(lang='fr')
+	head
+		block meta
+			meta(charset='UTF-8')
+			meta(name='viewport', content='width=device-width, initial-scale=1.0')
+			meta(http-equiv='X-UA-Compatible', content='ie=edge')
+			title Welcome
+		block styles
+			link(rel='stylesheet', href='html/style.css')
+body
+	block navigation
+		h1 Yo !
+		ul
+			li
+				a(href='/') accueil
+				li
+				a(href='/page1') page1
+				li
+				a(href='/page2') page2
+				li
+				a(href='/formulaire') Contact
+		h2= nbDeConnex

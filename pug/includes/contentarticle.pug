@@ -1,0 +1,20 @@
+// Page Header
+// Set your background image for this header on the line below.
+each val in article
+  header.intro-header(style="background-image: url('/img/about-bg.jpg')")
+    .container
+      .row
+        .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+          .page-heading
+            h1= val.titre
+            hr.small
+            span.subheading This is what I do.
+// Main Content
+each val in article
+  .container
+    .row
+      .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+        p=val.contenu
+          
+
+hr

@@ -1,0 +1,13 @@
+    .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+      each val in article
+        .post-preview
+          a(href='/article/'+val._id)
+            h2.post-title= val.titre
+            h3.post-subtitle= val.contenu
+          p.post-meta='Poster par '+val.auteur+' le '+val.date.getDate()+' '+mois[val.date.getMonth()]+' '+val.date.getFullYear()
+      hr
+      // Pager
+      ul.pager
+        li.next
+          a(href='#') Older Posts →
+hr

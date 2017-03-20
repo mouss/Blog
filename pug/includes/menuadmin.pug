@@ -1,0 +1,29 @@
+.col-sm-3
+  .nav-side-menu
+    .brand Admin Blog de Moussa
+    i.fa.fa-bars.fa-2x.toggle-btn(data-toggle='collapse', data-target='#menu-content')
+    .menu-list
+      ul#menu-content.menu-content.collapse.out
+        li
+          a(href='/admin')
+            i.fa.fa-dashboard.fa-lg
+            |  Dashboard
+        li
+          a(href='#')
+            i.fa.fa-dashboard.fa-lg
+            |  Pages
+        li
+          a(href='/admin/ajout')
+            i.fa.fa-dashboard.fa-lg
+            |  Articles
+        li
+          a(href='/admin/ajoutuser')
+            i.fa.fa-dashboard.fa-lg
+            |  Utilisateurs
+        li.collapsed(data-toggle='collapse', data-target='#new')
+          a(href='#')
+            i.fa.fa-car.fa-lg
+            |  New
+            span.arrow
+        ul#new.sub-menu.collapse
+          li New New 1

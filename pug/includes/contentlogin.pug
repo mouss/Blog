@@ -1,0 +1,19 @@
+form.form-horizontal(method='POST', action='/admin')
+  fieldset
+    // Form Name
+    legend Form Name
+    // Text input
+    .form-group
+      label.col-md-4.control-label(for='textinput') Login
+      .col-md-4
+        input#textinput.form-control.input-md(name='login', type='text', placeholder='Login')
+    // Password input
+    .form-group
+      label.col-md-4.control-label(for='passwordinput') Mot de passe
+      .col-md-4
+        input#passwordinput.form-control.input-md(name='motdepasse', type='password', placeholder='mot de passe')
+    // Button
+    .form-group
+      label.col-md-4.control-label(for='singlebutton')
+      .col-md-4
+        button#singlebutton.btn.btn-primary(name='singlebutton') Envoyer

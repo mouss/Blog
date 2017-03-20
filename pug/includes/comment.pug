@@ -1,0 +1,16 @@
+.row
+  .col-sm-12
+    h3 Commentaire
+  // /col-sm-12
+// /row
+.row
+  .col-sm-1
+  // /col-sm-1
+  .col-sm-5
+    each val in comment
+      .panel.panel-default
+        .panel-heading
+          strong= 'Par '+val.identifiant
+          span.text-muted= ' le '+val.date.getDate()+' '+mois[val.date.getMonth()]+' '+val.date.getFullYear()
+        .panel-body
+          p= val.message

@@ -1,0 +1,15 @@
+.container
+  .row
+    h3 Ajouter un Commentaire
+    h4= response
+    if(req.session.user)
+      .row
+        .col-md-6
+          .widget-area.no-padding.blank
+            .status-upload
+              form(method='POST', action='/articles/'+idarticle)
+                textarea(placeholder='What are you doing right now?' name='message')
+                button.btn.btn-success.green(type='submit')
+                  i.fa.fa-share
+                  |  Envoyer
+  include comment.pug
